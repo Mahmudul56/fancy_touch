@@ -30,7 +30,7 @@ class _loginState extends State<login> {
           Column(
             children: [
               Container(
-                  height: MediaQuery.of(context).size.height / 2.5,
+                  height: MediaQuery.of(context).size.height / 3,
                   child: Image.asset("assets/user.png" ,)),
               Padding(
                 padding: const EdgeInsets.only(right: 14, left: 10),
@@ -137,8 +137,8 @@ class _loginState extends State<login> {
                       ),
                     )),
               ),
-              SizedBox(
-                height: 10,
+              Divider(
+                thickness: 1,
               ),
               Container(
                 height: MediaQuery.of(context).size.height/13,
@@ -160,6 +160,9 @@ class _loginState extends State<login> {
                           fontSize: 20,
                         )))),
               ),
+              Divider(
+                thickness: 1,
+              ),
               Container(
                 height: MediaQuery.of(context).size.height/13,
                 width: MediaQuery.of(context).size.width/2,
@@ -180,9 +183,6 @@ class _loginState extends State<login> {
                           fontSize: 20,
                         )))),
               ),
-              SizedBox(
-                height: 20,
-              )
             ],
           ),
         ),

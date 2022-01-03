@@ -92,34 +92,28 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Widget _search() {
-    return Container(
-      margin: AppTheme.padding,
-      child: Row(
-        children: <Widget>[
-          Expanded(
-            child: Container(
-              height: 40,
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                  color: LightColor.lightGrey.withAlpha(100),
-                  borderRadius: BorderRadius.all(Radius.circular(10))),
-              child: TextField(
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>login()));
-                },
-                decoration: InputDecoration(
-                    border: InputBorder.none,
-                    hintText: "signin and login page design here",
-                    hintStyle: TextStyle(fontSize: 12),
-                    contentPadding:
-                        EdgeInsets.only(left: 10, right: 10, bottom: 0, top: 5),
-                    prefixIcon: Icon(Icons.search, color: Colors.black54)),
+    return InkWell(
+      onTap: (){
+        Navigator.push(context, MaterialPageRoute(builder: (context)=>login()));
+      },
+      child: Container(
+        margin: AppTheme.padding,
+        child: Row(
+          children: <Widget>[
+            Expanded(
+              child: Container(
+                height: 40,
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                    color: LightColor.lightGrey.withAlpha(100),
+                    borderRadius: BorderRadius.all(Radius.circular(10))),
+                child: Text("Click here for more design",style: TextStyle(fontSize: 20),),
               ),
             ),
-          ),
-          SizedBox(width: 20),
-          _icon(Icons.filter_list, color: Colors.black54)
-        ],
+            SizedBox(width: 20),
+            _icon(Icons.filter_list, color: Colors.black54)
+          ],
+        ),
       ),
     );
   }
