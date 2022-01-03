@@ -1,3 +1,4 @@
+import 'package:fancy_touch/src/Screen/login_screen.dart';
 import 'package:fancy_touch/src/themes/light_color.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -25,10 +26,11 @@ class _MyHomePageState extends State<MyHomePage> {
           color: Theme.of(context).backgroundColor,
           boxShadow: AppTheme.shadow),
       child: Icon(
-        icon,
-        color: color,
-      ),
-    ).ripple(() {}, borderRadius: BorderRadius.all(Radius.circular(13)));
+          icon,
+          color: color,
+      )
+    ).ripple(() {
+    }, borderRadius: BorderRadius.all(Radius.circular(13)));
   }
 
   Widget _categoryWidget() {
@@ -102,9 +104,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   color: LightColor.lightGrey.withAlpha(100),
                   borderRadius: BorderRadius.all(Radius.circular(10))),
               child: TextField(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>login()));
+                },
                 decoration: InputDecoration(
                     border: InputBorder.none,
-                    hintText: "Search Products",
+                    hintText: "signin and login page design here",
                     hintStyle: TextStyle(fontSize: 12),
                     contentPadding:
                         EdgeInsets.only(left: 10, right: 10, bottom: 0, top: 5),
